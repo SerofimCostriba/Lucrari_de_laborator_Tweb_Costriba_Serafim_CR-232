@@ -1,0 +1,186 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+}
+
+h1 {
+    color: #2e7d32;
+    margin-top: 0px; /* Reduci spațiul de sus */
+    text-align: center;
+    gap: 0px;
+}
+
+
+.navbar {
+    width: 100%;
+    background-color: #145a32; /* Culoare verde închis pentru navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100; /* Asigură că navbar-ul va fi deasupra altor elemente */
+    padding: 15px 0; /* Înălțimea barei de navigație */
+    margin: 0; /* Elimină marginile */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centrează elementele în navbar */
+    gap: 30px; /* Spațiu între linkuri */
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold; /* Textul boltit */
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #196f3d; /* Culoare verde mai închis la hover */
+}
+
+/* Cea de-a doua bară de navigare */
+.categories-navbar {
+    width: 100%;
+    background-color: #7f9b4e; /* Culoare verde avocado */
+    position: fixed;
+    top: 50px; /* Plasează sub prima bară, dar lipită de ea */
+    left: 0;
+    z-index: 90;
+    padding: 5px 0; /* Bara subțire */
+    margin: 0; /* Elimină marginile */
+}
+
+.categories-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Spațiu mai mic între linkuri */
+    flex-wrap: wrap; /* Permite ca linkurile să se înfășoare pe mai multe linii */
+}
+
+.categories-navbar li {
+    display: inline-block;
+}
+
+.categories-navbar a {
+    color: #ffffff; /* Alb-verzui pentru text */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    font-weight: bold; /* Textul boltit */
+    transition: background-color 0.3s ease;
+}
+
+.categories-navbar a:hover {
+    background-color: #5a7739; /* Culoare mai închisă la hover */
+}
+
+footer {
+    width: 100%;
+    background-color: #2e7d32; /* Culoare verde pentru footer */
+    color: white;
+    text-align: center;
+    padding: 50px 0; /* Dimensiune mare pentru footer */
+    position: absolute;
+    bottom: 0;
+}
+
+/* Stilizare pentru centrul imaginii */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Poți ajusta înălțimea în funcție de nevoile tale */
+}
+
+.image-container img {
+    max-width: 25%; /* Asigură-te că imaginea nu depășește dimensiunea ecranului */
+    height: auto; /* Păstrează proporțiile corecte ale imaginii */
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    gap: 0px; /* Spațiu între elemente */
+    margin-top: 120px; /* Evită suprapunerea cu navbar-ul */
+    padding: 0px;
+    max-width: 80%;
+}
+
+.left-text {
+    width: 50%; /* Ajustează lățimea textului pentru echilibru */
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+    background-color: #d4edda; /* Fundal verde deschis */
+    padding: 15px; /* Adaugă spațiu în jurul textului */
+    border-radius: 10px; /* Rotunjirea colțurilor */
+    margin-top: 0;
+    line-height: 1.3;
+    
+}
+
+ .right-text {
+    width: 50%; /* Ajustează lățimea textului pentru echilibru */
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+    background-color: #d4edda; /* Fundal verde deschis */
+    padding: 15px; /* Adaugă spațiu în jurul textului */
+    border-radius: 10px; /* Rotunjirea colțurilor */
+    margin-top: 0;
+    line-height: 1.2;
+    
+}
+
+.image-container img {
+    max-width: 15%; /* Ajustează dimensiunea imaginii */
+    height: auto;
+}
+
+.right-text li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+    line-height: 1.2; /* Crește spațiul între rânduri */
+    list-style-type: none; /* Elimină punctele implicite */
+}
+
+.right-text li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    color: green;
+    font-size: 18px;
+}
+
+
+.content-container img {
+    max-width: 20%; /* Ajustează dimensiunea imaginii */
+    height: auto;
+    margin-top: -80px;
+}
+
