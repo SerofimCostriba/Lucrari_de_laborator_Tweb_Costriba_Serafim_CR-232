@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px; /* Spațiu pentru footer */
+}
+
+.navbar {
+    width: 100%;
+    background-color: #145a32;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #196f3d;
+}
+
+.categories-navbar {
+    width: 100%;
+    background-color: #7f9b4e;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 90;
+    padding: 5px 0;
+}
+
+.categories-navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.categories-navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.categories-navbar a:hover {
+    background-color: #5a7739;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 120px;
+    padding: 20px;
+    align-items: stretch; /* Face ca toate cardurile să aibă aceeași înălțime */
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuie conținutul uniform */
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product h3 {
+    color: #145a32;
+    flex-grow: 1; /* Asigură că titlul rămâne aliniat uniform */
+}
+
+.product p {
+    flex-grow: 1; /* Face ca descrierea să împingă prețul în jos */
+}
+
+.product span {
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* Responsive pentru ecrane mai mici */
+@media (max-width: 768px) {
+    .categories-navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navbar fixat */
+.navbar, .categories-navbar {
+    z-index: 1000;
+}
+
+/* Ajustări pentru conținutul paginii */
+.contact-container {
+    padding-bottom: 100px; /* Evită suprapunerea cu footer-ul */
+}

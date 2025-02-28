@@ -1,0 +1,190 @@
+/* Stilizare generală */
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar principal */
+.navbar {
+    width: 100%;
+    background-color: #145a32;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #196f3d;
+}
+
+/* Navbar secundar (categorii) */
+.categories-navbar {
+    width: 100%;
+    background-color: #7f9b4e;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 90;
+    padding: 5px 0;
+}
+
+.categories-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.categories-navbar li {
+    display: inline-block;
+}
+
+.categories-navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.categories-navbar a:hover {
+    background-color: #5a7739;
+}
+
+/* Containerul principal */
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    margin: 120px auto;
+    padding: 20px;
+    max-width: 80%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Secțiunea de contact (în stânga) */
+.contact {
+    background-color: #d4edda;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.contact h2 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.contact a {
+    color: #145a32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Imaginea (în dreapta) */
+.image {
+    width: 50%;
+    text-align: right;
+}
+
+.image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Alte ajustări pentru conținutul principal */
+body {
+    margin: 0;
+    padding-bottom: 80px;
+}
+
+/* Navbar fixat */
+.navbar, .categories-navbar {
+    z-index: 1000;
+}
+
+/* Responsivitate */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image img {
+        max-width: 300px;
+    }
+}

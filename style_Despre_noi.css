@@ -1,0 +1,147 @@
+/* Stilizare generală */
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    color: #2e7d32;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #145a32;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover{
+    background-color: #196f3d;
+}
+
+/* Stilizare bara de categorii */
+.categories-navbar {
+    width: 100%;
+    background-color: #7f9b4e;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 90;
+    padding: 5px 0;
+}
+
+.categories-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.categories-navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.categories-navbar a:hover {
+    background-color: #5a7739;
+}
+
+main {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.info-blocks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info-block {
+    background: #d4edda;
+    padding: 15px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.image {
+    position: fixed; /* Fixează imaginea */
+    bottom: -50px; /* Ajustează poziția ca să fie deasupra footer-ului */
+    left: 0;
+    width: 100vw; /* Ocupă întreaga lățime a paginii */
+    z-index: 999; /* Se asigură că imaginea rămâne peste alte elemente */
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    position: fixed; /* Fixăm footer-ul la baza paginii */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000; /* Se asigură că footer-ul e peste toate */
+}
+
+
+/* Alte ajustări pentru conținutul principal */
+body {
+    margin: 0;
+    padding-bottom: 80px; /* Adaugă spațiu pentru footer */
+}
+
+/* Navbar fixat */
+.navbar, .categories-navbar {
+    z-index: 1000; /* Asigură că navbar-ul rămâne deasupra altor elemente */
+}
+
+/* Ajustări pentru conținutul paginii */
+.contact-container {
+    padding-bottom: 100px; /* Asigură că conținutul nu se suprapune cu footer-ul */
+}
