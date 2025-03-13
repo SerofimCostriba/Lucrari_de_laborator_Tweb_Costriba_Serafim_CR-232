@@ -1,0 +1,152 @@
+/* Stilizare generală */
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../Image/copac_IMG.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: scroll, hidden;
+}
+
+
+/* Navbar principal */
+.navbar {
+    width: 100%;
+    background-color: #145a32;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #196f3d;
+}
+
+/* Navbar secundar (categorii) */
+.categories-navbar {
+    width: 100%;
+    background-color: #7f9b4e;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 90;
+    padding: 5px 0;
+}
+
+.categories-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.categories-navbar li {
+    display: inline-block;
+}
+
+.categories-navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.categories-navbar a:hover {
+    background-color: #5a7739;
+}
+
+
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Alte ajustări pentru conținutul principal */
+body {
+    margin: 0;
+    padding-bottom: 80px;
+}
+
+/* Navbar fixat */
+.navbar, .categories-navbar {
+    z-index: 1000;
+}
+
+.titlu-copaci{
+    position: absolute;
+    top: 120px; /* Ajustează valoarea după nevoie */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto; /* Permite imaginii să își păstreze dimensiunea originală */
+    max-width: 30%; /* Evită ca imaginea să fie prea mare */
+    height: auto;
+}
+
+/* Ascunde scrollbar-ul în Chrome, Safari și Edge */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    display: none;
+}
+
+/* Ascunde scrollbar-ul în Firefox */
+html {
+    scrollbar-width: none;
+}
+
+/* Ascunde scrollbar-ul în Internet Explorer și Edge */
+body {
+    -ms-overflow-style: none;
+}
+
+
+
+
+
+
+
