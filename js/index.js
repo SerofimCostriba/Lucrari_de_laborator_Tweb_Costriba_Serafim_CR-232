@@ -43,13 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
     createObserver(header, "translateY(0) scale(1)", 400);
 
     // ----------------- Fundal slideshow -----------------
-    const backgrounds = [
-        "../Image/forest_path_summer_125991_1920x1080.jpg",
-        "../Image/803471.jpg",
-        "../Image/803470.jpg",
-        "../Image/803491.jpg",
-        "../Image/803486.jpg"
-    ];
+    const backgroundScript = document.getElementById("background-data");
+    const backgrounds = JSON.parse(backgroundScript.textContent || "[]");
+    
+    console.log(backgrounds); 
+    
 
     let currentIndex = 0;
     const bgContainer = document.createElement("div");
