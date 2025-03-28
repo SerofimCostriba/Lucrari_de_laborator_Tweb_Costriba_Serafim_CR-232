@@ -245,3 +245,203 @@ html {
 body {
     -ms-overflow-style: none;
 }
+
+
+
+/* Stiluri pentru modalul de autentificare / înregistrare */
+.modal {
+    display: none; /* Ascuns implicit */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #145a32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #196f3d;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+}
+
+/* Overlay cu efect de blur */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+}
+
+/* Fereastra modală pentru logare */
+#auth-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+}
+
+/* Efect de blur pentru conținut */
+body.modal-active main,
+body.modal-active header,
+body.modal-active footer {
+    filter: blur(10px);
+    pointer-events: none; /* Previne interacțiunea cu elementele din fundal */
+}
+
+/* Buton de închidere */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+  }
+  
+  /* Exemple pentru modal și overlay */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: none;
+  }
+  
+  #auth-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+  }
+  
+  .modal-content {
+    position: relative;
+    text-align: center;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: red;
+  }
+  
+  /* Stiluri pentru link-urile de comutare */
+  #toggle-auth {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  #toggle-auth a {
+    color: #145a32;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #toggle-auth a:hover {
+    text-decoration: underline;
+  }
+
+  
+  /* Asigură tranziția pentru formulare */
+.modal-content form {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Clase pentru fade-out/in (opțional, dacă vrei un control explicit) */
+  .fade-out {
+    opacity: 0;
+  }
+  
+  .fade-in {
+    opacity: 1;
+  }
+  
+  /* Stil pentru săgeata de revenire */
+#back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 24px;
+  }
+  
+  #back-arrow a {
+    color: #145a32;
+    text-decoration: none;
+  }
+  
+  
+  
+  

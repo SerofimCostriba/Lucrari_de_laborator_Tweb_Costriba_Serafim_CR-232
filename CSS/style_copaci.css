@@ -10,9 +10,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: scroll, hidden;
+    overflow: auto;
 }
-
 
 /* Navbar principal */
 .navbar {
@@ -21,7 +20,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
     padding: 15px 0;
 }
 
@@ -59,7 +58,7 @@ body {
     position: fixed;
     top: 50px;
     left: 0;
-    z-index: 90;
+    z-index: 900;
     padding: 5px 0;
 }
 
@@ -91,8 +90,6 @@ body {
     background-color: #5a7739;
 }
 
-
-
 /* Footer */
 footer {
     width: 100%;
@@ -112,19 +109,54 @@ body {
     padding-bottom: 80px;
 }
 
-/* Navbar fixat */
-.navbar, .categories-navbar {
-    z-index: 1000;
-}
-
-.titlu-copaci{
+/* Titlu imagine */
+.titlu-copaci {
     position: absolute;
-    top: 120px; /* Ajustează valoarea după nevoie */
+    top: 120px;
     left: 50%;
     transform: translateX(-50%);
-    width: auto; /* Permite imaginii să își păstreze dimensiunea originală */
-    max-width: 30%; /* Evită ca imaginea să fie prea mare */
+    width: auto;
+    max-width: 30%;
     height: auto;
+}
+
+/* Produse */
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 300px;
+    margin-top: 200px;
+}
+
+.product {
+    width: 180px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product p {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Efect hover */
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Ascunde scrollbar-ul în Chrome, Safari și Edge */
@@ -143,10 +175,3 @@ html {
 body {
     -ms-overflow-style: none;
 }
-
-
-
-
-
-
-

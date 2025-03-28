@@ -45,9 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // ----------------- Fundal slideshow -----------------
     const backgroundScript = document.getElementById("background-data");
     const backgrounds = JSON.parse(backgroundScript.textContent || "[]");
-    
-    console.log(backgrounds); 
-    
 
     let currentIndex = 0;
     const bgContainer = document.createElement("div");
@@ -109,4 +106,116 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     animateParallax();
+
+    // ----------------- Logare și înregistrare modal -----------------
+    const loginBtn = document.getElementById("login-btn");
+    const registerBtn = document.getElementById("register-btn");
+    const modal = document.getElementById("auth-modal");
+    const closeModal = document.querySelector(".close");
+
+    function showModal() {
+        modal.style.display = "flex";
+    }
+
+    function hideModal() {
+        modal.style.display = "none";
+    }
+
+    loginBtn.addEventListener("click", showModal);
+    registerBtn.addEventListener("click", showModal);
+    closeModal.addEventListener("click", hideModal);
+
+    // Ascundere modal când utilizatorul dă click în afara ferestrei
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            hideModal();
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const authBtn = document.getElementById("auth-btn");
+    const modal = document.getElementById("auth-modal");
+    const closeModal = document.querySelector(".close-btn");
+    const authForm = document.getElementById("auth-form");
+    const registerForm = document.getElementById("register-form");
+    const switchToRegister = document.getElementById("switch-to-register");
+    const switchToLogin = document.getElementById("switch-to-login");
+    const overlay = document.getElementById("overlay");
+    const backArrow = document.getElementById("back-arrow");
+    const switchToRegisterContainer = document.getElementById("switch-to-register-container");
+
+    // Funcția de a arăta modalul
+    function showModal() {
+        modal.style.display = "flex";
+        overlay.style.display = "block";
+    }
+
+    // Funcția de a ascunde modalul
+    function hideModal() {
+        modal.style.display = "none";
+        overlay.style.display = "none";
+    }
+
+    // Funcția de comutare între formulare (Autentificare → Înregistrare)
+    function switchToRegisterForm(event) {
+        event.preventDefault();
+        authForm.classList.add("hidden");
+        registerForm.classList.remove("hidden");
+        document.getElementById("modal-title").textContent = "Înregistrare";
+        backArrow.style.display = "block"; // Afișează săgeata înapoi
+        switchToRegisterContainer.style.display = "none"; // Ascunde textul "Nu ai cont?"
+    }
+
+    // Funcția de comutare între formulare (Înregistrare → Autentificare)
+    function switchToLoginForm(event) {
+        event.preventDefault();
+        registerForm.classList.add("hidden");
+        authForm.classList.remove("hidden");
+        document.getElementById("modal-title").textContent = "Autentificare";
+        backArrow.style.display = "none"; // Ascunde săgeata înapoi
+        switchToRegisterContainer.style.display = "block"; // Afișează textul "Nu ai cont?"
+    }
+
+    // Event listeners
+    authBtn.addEventListener("click", showModal);  // Deschide modalul când se apasă butonul de autentificare
+    closeModal.addEventListener("click", hideModal);  // Închide modalul când se apasă pe butonul de închidere
+    overlay.addEventListener("click", hideModal);  // Închide modalul când se apasă în afara ferestrei
+    switchToRegister.addEventListener("click", switchToRegisterForm);  // Comută la formularul de înregistrare
+    switchToLogin.addEventListener("click", switchToLoginForm);  // Comută la formularul de autentificare
+
+    // Inițializare
+    backArrow.style.display = "none";  // Ascunde săgeata la început
+    switchToRegisterContainer.style.display = "block";  // Afișează "Nu ai cont?" la început
+});
+
+
+// Deschiderea modalului
+document.getElementById('auth-btn').addEventListener('click', function() {
+    document.getElementById('auth-modal').classList.remove('hidden');
+    document.getElementById('overlay').classList.remove('hidden');
+});
+
+// Închiderea modalului
+document.querySelector('.close-btn').addEventListener('click', function() {
+    document.getElementById('auth-modal').classList.add('hidden');
+    document.getElementById('overlay').classList.add('hidden');
+});
+
+// Comutarea între formulare (Autentificare → Înregistrare)
+document.getElementById('switch-to-register').addEventListener('click', function() {
+    document.getElementById('auth-form').classList.add('hidden');
+    document.getElementById('register-form').classList.remove('hidden');
+    document.getElementById('modal-title').textContent = 'Înregistrare';
+    document.getElementById('switch-to-register-container').style.display = 'none';
+    document.getElementById('back-arrow').style.display = 'inline';
+});
+
+// Comutarea între formulare (Înregistrare → Autentificare)
+document.getElementById('switch-to-login').addEventListener('click', function() {
+    document.getElementById('register-form').classList.add('hidden');
+    document.getElementById('auth-form').classList.remove('hidden');
+    document.getElementById('modal-title').textContent = 'Autentificare';
+    document.getElementById('switch-to-register-container').style.display = 'inline';
+    document.getElementById('back-arrow').style.display = 'none';
 });
