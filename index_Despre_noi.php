@@ -11,10 +11,10 @@
     <header>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">AgroShop</a></li>
-                <li><a href="index_Produse.html">Produse</a></li>
-                <li><a href="index_Despre_noi.html" class="active">Despre noi</a></li>
-                <li><a href="index_Contacte.html">Contact</a></li>
+                <li><a href="index.php">AgroShop</a></li>
+                <li><a href="index_Produse.php">Produse</a></li>
+                <li><a href="index_Despre_noi.php" class="active">Despre noi</a></li>
+                <li><a href="index_Contacte.php">Contact</a></li>
             </ul>
         </nav>
         <nav class="categories-navbar">
@@ -24,7 +24,7 @@
                 <li><a href="#">Cereale</a></li>
                 <li><a href="#">Plante medicinale</a></li>
                 <li><a href="#">Animale</a></li>
-                <li><a href="copaci.html">Copaci</a></li>
+                <li><a href="copaci.php">Copaci</a></li>
                 <li><a href="#">Apicultură</a></li>
                 <li><a href="#">Condimente</a></li>
                 <li><a href="#">Uleiuri</a></li>

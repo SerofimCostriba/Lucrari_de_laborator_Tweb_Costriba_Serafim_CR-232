@@ -19,10 +19,10 @@
   <header>
     <nav class="navbar">
       <ul>
-        <li><a href="index.html">AgroShop</a></li>
-        <li><a href="index_Produse.html">Produse</a></li>
-        <li><a href="index_Despre_noi.html">Despre noi</a></li>
-        <li><a href="index_Contacte.html">Contact</a></li>
+        <li><a href="index.php">AgroShop</a></li>
+        <li><a href="index_Produse.php">Produse</a></li>
+        <li><a href="index_Despre_noi.php">Despre noi</a></li>
+        <li><a href="index_Contacte.php">Contact</a></li>
         <li><a href="#" id="auth-btn">Autentificare</a></li>
       </ul>
     </nav>
@@ -34,7 +34,7 @@
         <li><a href="#">Cereale</a></li>
         <li><a href="#">Plante medicinale</a></li>
         <li><a href="#">Animale</a></li>
-        <li><a href="copaci.html">Copaci</a></li>
+        <li><a href="copaci.php">Copaci</a></li>
         <li><a href="#">Apicultură</a></li>
         <li><a href="#">Condimente</a></li>
         <li><a href="#">Uleiuri</a></li>
@@ -54,7 +54,7 @@
       <h2 id="modal-title">Autentificare</h2>
 
       <!-- Formularul de autentificare (vizibil inițial) -->
-      <form id="auth-form" action="login.php" method="POST">
+      <form id="auth-form" action="user/login.php" method="POST">
         <input type="text" name="login-username" placeholder="Nume utilizator" required>
         <input type="password" name="login-password" placeholder="Parolă" required>
         <button type="submit">Continuă</button>
@@ -62,7 +62,7 @@
       
 
       <!-- Formularul de înregistrare (ascuns inițial) -->
-      <form id="register-form" class="hidden" action="#" method="POST">
+      <form id="register-form" class="hidden" action="user/register.php" method="POST">
         <input type="text" name="register-username" placeholder="Nume utilizator" required>
         <input type="email" name="register-email" placeholder="Email" required>
         <input type="password" name="register-password" placeholder="Parolă" required>
