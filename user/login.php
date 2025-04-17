@@ -1,28 +1,36 @@
 <?php
-// Încarcă fișierele necesare pentru conexiunea la baza de date
-include('db_connection.php');  // Fișierul care conține conexiunea la DB
+include('db_connection.php');
+session_start();
 
-// Verifică dacă formularul de autentificare a fost trimis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['login-username'];  // Preia numele de utilizator
-    $password = $_POST['login-password'];  // Preia parola
+    $username = trim($_POST['login-username']);
+    $password = trim($_POST['login-password']);
 
-    // Protejează împotriva atacurilor de tip SQL Injection
-    $username = mysqli_real_escape_string($conn, $username);
-    $password = mysqli_real_escape_string($conn, $password);
+    // Căutăm utilizatorul după username
+    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
 
-    // Verifică în baza de date dacă există un utilizator cu acest nume și parolă
-    $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";  // Ar trebui să folosești un hash pentru parola în loc de stocarea parolelor clare
-    $result = mysqli_query($conn, $query);
+    $result = $stmt->get_result();
 
-    // Dacă utilizatorul există, îl logăm
-    if (mysqli_num_rows($result) > 0) {
-        // Poți salva informațiile utilizatorului în sesiune
-        session_start();
-        $_SESSION['username'] = $username;  // Salvează utilizatorul în sesiune
-        header("Location: dashboard.php");  // Redirect către pagina de dashboard sau altă pagină protejată
+    // Dacă utilizatorul există
+    if ($result->num_rows === 1) {
+        $user = $result->fetch_assoc();
+
+        // Verificăm parola criptată
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['user_id'] = $user['id'];
+
+            header("Location: ../index.php"); // sau altă pagină
+            exit;
+        } else {
+            echo "Nume utilizator sau parolă incorectă!";
+        }
     } else {
         echo "Nume utilizator sau parolă incorectă!";
     }
+
+    $stmt->close();
 }
 ?>

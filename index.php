@@ -16,6 +16,7 @@
   </script>
 </head>
 <body>
+<?php session_start(); ?>
   <header>
     <nav class="navbar">
       <ul>
@@ -23,7 +24,13 @@
         <li><a href="index_Produse.php">Produse</a></li>
         <li><a href="index_Despre_noi.php">Despre noi</a></li>
         <li><a href="index_Contacte.php">Contact</a></li>
-        <li><a href="#" id="auth-btn">Autentificare</a></li>
+         <!-- Afișare dinamică în funcție de sesiune -->
+         <?php if (isset($_SESSION['username'])): ?>
+          <li><a href="user/logout.php" id="log_out">Logout</a></li>
+        <?php else: ?>
+          <li><a href="#" id="auth-btn">Autentificare</a></li>
+        <?php endif; ?>
+        
       </ul>
     </nav>
 
@@ -114,5 +121,31 @@
   </footer>
 
   <script src="js/index.js"></script>
+
+  <!-- <script>
+    function logout() {
+      if ($result->num_rows === 1) {
+        $user = $result->fetch_assoc();
+        
+        // Verificăm parola criptată
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['user_id'] = $user['id'];
+
+            header("Location: ../index.php"); // sau altă pagină
+            exit;
+        } else {
+            echo "Nume utilizator sau parolă incorectă!";
+        }
+    } else {
+        echo "Nume utilizator sau parolă incorectă!";
+    }
+
+    $stmt->close();
+    document.getElementById('log-out')
+
+}
+
+  </script> -->
 </body>
 </html>

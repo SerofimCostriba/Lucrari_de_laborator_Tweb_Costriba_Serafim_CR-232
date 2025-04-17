@@ -1,0 +1,63 @@
+[
+    {
+      "imagine": "Image/Produse/sapa.webp",
+      "titlu": "Sapa de grădină",
+      "descriere": "Instrument esențial pentru grădinărit.",
+      "pret": "50 RON"
+    },
+    {
+      "imagine": "Image/Produse/c1-230312033533-instr.png",
+      "titlu": "Motocultor 7CP",
+      "descriere": "Ideal pentru prelucrarea solului.",
+      "pret": "2500 RON"
+    },
+    {
+      "imagine": "Image/Produse/pngwing.com(1).png",
+      "titlu": "Grâu de primăvară",
+      "descriere": "Sămânță de calitate superioară.",
+      "pret": "120 RON/sac"
+    },
+    {
+      "imagine": "Image/Produse/pngwingflow.com(1).png",
+      "titlu": "Lavandă uscată",
+      "descriere": "Perfectă pentru ceai și aromaterapie.",
+      "pret": "30 RON/kg"
+    },
+    {
+      "imagine": "Image/Produse/3d2d6d5dd0b503e70365b9ab0814f9db.webp",
+      "titlu": "Stup pentru albine",
+      "descriere": "Construcție solidă, ideală pentru apicultură.",
+      "pret": "400 RON"
+    },
+    {
+      "imagine": "Image/Produse/pngwing.com(1) fierastrau.png",
+      "titlu": "Fierăstrău electric",
+      "descriere": "Ideal pentru tăierea lemnului.",
+      "pret": "600 RON"
+    },
+    {
+      "imagine": "Image/Produse/pngegg(1).png",
+      "titlu": "Tractor agricol",
+      "descriere": "Performant pentru toate tipurile de teren agricol.",
+      "pret": "75,000 RON"
+    },
+    {
+      "imagine": "Image/Produse/kisspng-corn-kernel-vegetarian-cuisine-wine-corn-starch-5bfdcf4024f8f0.5141980015433603201514.png",
+      "titlu": "Semințe de porumb",
+      "descriere": "Hibrid productiv, ideal pentru recoltă mare.",
+      "pret": "200 RON/sac"
+    },
+    {
+      "imagine": "Image/Produse/kindpng_36503.png",
+      "titlu": "Miel pentru creștere",
+      "descriere": "Rasă de carne, hrănit natural.",
+      "pret": "500 RON"
+    },
+    {
+      "imagine": "Image/Produse/heirloomtomatoes-2.webp",
+      "titlu": "Semințe de roșii",
+      "descriere": "Varietate gustoasă și productivă.",
+      "pret": "15 RON/pachet"
+    }
+  ]
+  
