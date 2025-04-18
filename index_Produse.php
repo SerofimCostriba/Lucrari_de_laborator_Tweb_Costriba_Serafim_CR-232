@@ -34,6 +34,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>AgroShop - Produse</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style_produse.css">
 </head>
